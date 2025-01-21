@@ -154,7 +154,7 @@ export const sendConfirmationEmail = async (
         emails.forEach(async (email) => {
             await sendEmail(email, { userConfirmationUrl: { url: options.confirmUrl }, usermail: user.email });
         });
-        console.log('Email sent for account confirmation');
+        console.log('Emails (admins and user) sent for account confirmation');
     } catch (error) {
         console.log('Error sending confirmation email: ', error);
         throw error;
